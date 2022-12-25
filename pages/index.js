@@ -28,6 +28,8 @@ return <h1>Home Page</h1>
     <div>
       <h1>Next js pre-rendering</h1>
       <Link href="/pre-rendering-data-fetching/users">Users Page</Link>
+      <hr/>
+      <Link href="/pre-rendering-data-fetching/posts">Posts Page</Link>
     </div>
   );
 }

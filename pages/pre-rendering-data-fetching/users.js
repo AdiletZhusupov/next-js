@@ -1,8 +1,10 @@
 import User from "../../components/user";
+import Link from 'next/link'
 
 export default function UsersList({ users }) {
   return (
     <>
+      <Link href="/">Home</Link>
       <h1>List of users</h1>
       {users.map((user) => (
         <div key={user.id}>
