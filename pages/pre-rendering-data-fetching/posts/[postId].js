@@ -1,4 +1,12 @@
+// import {useRouter} from 'next/router'
 export default function Post({ post }) {
+  // const router = useRouter()
+
+  // if(router.isFallback){
+  //   return <h1>Loading...</h1>
+  // }
+
+
   return (
     <>
       <h2>
@@ -9,29 +17,31 @@ export default function Post({ post }) {
   );
 }
 export async function getStaticPaths(){
-  const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await resp.json();
-  const paths = data.map(post => {
+  // const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+  // const data = await resp.json();
+  // const paths = data.map(post => {
+  //   return {
+  //     params: {
+  //       postId: `${post.id}`
+  //     }
+  //   }
+  // })
     return {
-      params: {
-        postId: `${post.id}`
-      }
-    }
-  })
-    return {
-        // paths: [
-        //     {
-        //         params: { postId: "1"}
-        //     },
-        //     {
-        //         params: { postId: "2"}
-        //     },
-        //     {
-        //         params: { postId: "3"}
-        //     },
-        // ],
-        paths,
-        fallback: false,
+        paths: [
+            {
+                params: { postId: "1"}
+            },
+            {
+                params: { postId: "2"}
+            },
+            {
+                params: { postId: "3"}
+            },
+        ],
+        // paths,
+        // fallback: false,
+        // fallback: true,
+        fallback: 'blocking',
     }
 }
 export async function getStaticProps(context) {
@@ -40,6 +50,15 @@ export async function getStaticProps(context) {
     `https://jsonplaceholder.typicode.com/posts/${params.postId}`
   );
   const data = await resp.json();
+
+    if(!data.id){
+      return {
+        notFound: true
+      }
+    }
+
+
+  console.log(`Generating a page for /posts/${params.postId}`)
   return {
     props: {
       post: data,
