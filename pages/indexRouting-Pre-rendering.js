@@ -3,9 +3,8 @@ import Link from 'next/link'
 import {useRouter} from 'next/router'
 */
 
-//Tutorials 13-21
-
-import Link from 'next/link'
+//Tutorials 14-40 Pre-rendering-Data-fetching
+// import Link from 'next/link'
 
 
 export default function Home() {
@@ -14,16 +13,20 @@ export default function Home() {
   const handleClick = () =>{
     router.push('/products')
   }
-*/
-  {
-    /* Tutorials 1-13 Routing
-return <h1>Home Page</h1>
-<Link href="blog">Blog</Link>
-<hr/>
-<Link href="products">Product</Link>
-<hr/>
-<button onClick={handleClick}>Place Order</button> */
-  }
+  */
+
+ /* Tutorials 1-13 Routing
+   return (<h1>Home Page</h1>
+   <Link href="blog">Blog</Link>
+   <hr/>
+   <Link href="products">Product</Link>
+   <hr/>
+   <button onClick={handleClick}>Place Order</button>
+   ) 
+  */
+
+  
+  /*Tutorials 14-40 Pre-rendering-Data-fetching
   return (
     <div>
       <h1>Next js pre-rendering</h1>
@@ -32,4 +35,12 @@ return <h1>Home Page</h1>
       <Link href="/pre-rendering-data-fetching/posts">Posts Page</Link>
     </div>
   );
+}
+  */
+
+/*Tutorials 41-48 */
+return(
+  <div></div>
+)
+
 }
