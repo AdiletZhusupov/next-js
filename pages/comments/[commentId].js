@@ -1,6 +1,6 @@
-import { comments } from "../../../data/comments";
+import { comments } from "../../data/comments";
 
-export default function CommentTwo({ comment }) {
+export default function Comment({ comment }) {
   return (
     <>
       <h1>

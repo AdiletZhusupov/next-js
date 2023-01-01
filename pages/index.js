@@ -6,7 +6,6 @@ import {useRouter} from 'next/router'
 //Tutorials 14-40 Pre-rendering-Data-fetching
 // import Link from 'next/link'
 
-
 export default function Home() {
   /* Tutorials 1-13 Routing
   const router = useRouter()
@@ -15,7 +14,7 @@ export default function Home() {
   }
   */
 
- /* Tutorials 1-13 Routing
+  /* Tutorials 1-13 Routing
    return (<h1>Home Page</h1>
    <Link href="blog">Blog</Link>
    <hr/>
@@ -25,7 +24,6 @@ export default function Home() {
    ) 
   */
 
-  
   /*Tutorials 14-40 Pre-rendering-Data-fetching
   return (
     <div>
@@ -38,9 +36,10 @@ export default function Home() {
 }
   */
 
-/*Tutorials 41-48 */
-return(
-  <div></div>
-)
-
+  /*Tutorials 49-54 Styling */
+  return (
+    <div>
+      <h2>Home Page</h2>
+    </div>
+  );
 }
