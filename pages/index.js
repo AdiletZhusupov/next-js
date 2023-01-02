@@ -33,13 +33,18 @@ export default function Home() {
       <Link href="/pre-rendering-data-fetching/posts">Posts Page</Link>
     </div>
   );
-}
   */
 
-  /*Tutorials 49-54 Styling */
+  /*Tutorials 49-54 Styling 
   return (
     <div>
       <h2>Home Page</h2>
     </div>
-  );
+  );*/
+  /* Tutorials 55-65  Miscellaneous Section */
+  return (
+    <div>
+      <h2>Hello</h2>
+    </div>
+  )
 }
