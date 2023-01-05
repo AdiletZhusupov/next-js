@@ -6,6 +6,9 @@ import {useRouter} from 'next/router'
 //Tutorials 14-40 Pre-rendering-Data-fetching
 // import Link from 'next/link'
 
+/* Tutorials 66-78  Authentication Section */
+
+import { useSession, signIn } from "next-auth/react";
 export default function Home() {
   /* Tutorials 1-13 Routing
   const router = useRouter()
@@ -41,10 +44,13 @@ export default function Home() {
       <h2>Home Page</h2>
     </div>
   );*/
-  /* Tutorials 55-65  Miscellaneous Section */
+
+  /* Tutorials 66-78  Authentication Section */
+  const {data: session, status} = useSession()
+
   return (
     <div>
-      <h2>Hello</h2>
+      <h2>Hello {session ? `${session.user.name}!` : "Dear Guest!"}</h2>
     </div>
   )
 }
