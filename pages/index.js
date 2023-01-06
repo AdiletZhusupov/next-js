@@ -48,6 +48,7 @@ export default function Home() {
   /* Tutorials 66-78  Authentication Section */
   const {data: session, status} = useSession()
 
+  console.log(session)
   return (
     <div>
       <h2>Hello {session ? `${session.user.name}!` : "Dear Guest!"}</h2>
